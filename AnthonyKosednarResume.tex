@@ -1,0 +1,239 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+%
+
+%(c) 2011 Anthony Kosednar <me@anthonykosednar.com> http://anthonykosednar.com/
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+\newlength{\outerbordwidth}
+
+\pagestyle{empty}
+
+\raggedbottom
+
+\raggedright
+
+\usepackage[svgnames]{xcolor}
+
+\usepackage{framed}
+
+\usepackage{tocloft}
+
+%-----------------------------------------------------------
+
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+
+\setlength{\headheight}{-0.25in}
+
+\setlength{\headsep}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+
+\setlength{\paperheight}{11in}
+
+\setlength{\paperwidth}{8.5in}
+
+\setlength{\tabcolsep}{0in}
+
+\setlength{\textheight}{9.75in}
+
+\setlength{\textwidth}{7in}
+
+\setlength{\topmargin}{-0.3in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+%Custom commands
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+\newcommand{\resheading}[1]{\vspace{8pt}
+
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+
+    \end{shaded}
+
+  }\vspace{-5pt}
+
+}
+
+\newcommand{\ressubheading}[4]{
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+
+		\textbf{#1} & #2 \\
+
+		\textit{#3} & \textit{#4} \\
+
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Anthony Kosednar} & \textbf{\today} \\
+
+{Website Developer} & {me@anthonykosednar.com} \\
+
+2835 East Park Ave., Gilbert, AZ 85234 & http://anthonykosednar.com/
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{Chandler Preparatory Academy}{Chandler, AZ}{High School Education}{Aug. 2008 - May 2012(projected)}
+
+	\begin{itemize}
+
+		\resitem{4 years Honors Humane Letters and French}
+
+		\resitem{2 years Honors Calculus and Physics}
+
+		\resitem{1 year Honors Geometry, Algebra, Chemistry, and Biology}
+
+		\resitem{2 Semesters Music, Drama, Art, and Poetry}
+		
+		\resitem{Senior Thesis}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Arizona State University}{Tempe,AZ}{School of Mathematical and Statistical Sciences}{Aug. 2010 - Present}
+
+	\begin{itemize}
+
+		\resitem{High School Program (Math Circles), Non-Credit Granting}
+
+		\resitem{Number Theory, Field Theory, Cryptography, and Statistics}
+
+	\end{itemize}
+	
+\item
+
+	\ressubheading{Rio Salado College}{Phoenix, AZ}{French Language Study}{June 2011 - Aug. 2011}
+
+	\begin{itemize}
+
+		\resitem{French 102}
+
+	\end{itemize}
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {\bf Development:} PHP, HTML, CSS, JavaScript, AutoIt, Python
+
+\item {\bf Computer Science:} Data Mining, Operating Systems
+
+\item Discovering and implementing new ideas.
+
+\item I can readily learn and adapt to a new discipline, area or environment and start producing real results quickly.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Work Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{Arizona State University}{Tempe, AZ}{Contracted Website Developer}{Aug. 2011 - Oct. 2011}
+
+	\begin{itemize}
+
+		\resitem{Maintained \texttt{Windows IIS Server} and \texttt{Linux LAMP Stack}}
+
+    		\resitem{Developed, and Maintained CMS solutions for Departments}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Lockerhub}{Gilbert, AZ}{Founder}{Aug. 2009 - Present}
+
+	\begin{itemize}
+
+		\resitem{Developed Websites and Applications for a range of Clients}
+
+  		 \resitem{System Administrator for a Network of Servers running  \texttt{Citrix XenServer} }
+
+	\end{itemize}
+
+\item 
+
+	\ressubheading{TechnoKOZ}{Gilbert, AZ}{Computer Technician}{July 2008 - Present}
+
+	\begin{itemize}
+
+		\resitem{Installed, repaired, maintained, and upgraded servers and desktop and notebook computers}
+
+ 		 \resitem{Installed and maintained network equipment}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Cybermark International Inc.}{Phoenix, AZ}{Search Engine Optimization Engineer}{May 2008 - Aug. 2008}
+
+	\begin{itemize}
+
+		\resitem{Preformed Back-link Campaigning for Clients}
+		\resitem{Preformed Social Media Campaigning for Clients}
+
+	\end{itemize}
+	
+\end{itemize}
+
+\end{document}
