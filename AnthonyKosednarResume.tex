@@ -1,226 +1,178 @@
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-
 % (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-
 % (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
-
-% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
 %
-
-%(c) 2011 Anthony Kosednar <me@anthonykosednar.com> http://anthonykosednar.com/
-
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
 \documentclass[letterpaper,11pt]{article}
-
 \newlength{\outerbordwidth}
-
 \pagestyle{empty}
-
 \raggedbottom
-
 \raggedright
-
 \usepackage[svgnames]{xcolor}
-
-\usepackage{framed}
-
+\usepackage{framed,tabularx,array}
 \usepackage{tocloft}
 
-%-----------------------------------------------------------
 
+%-----------------------------------------------------------
 %Edit these values as you see fit
 
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-
 \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-
 \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
-%-----------------------------------------------------------
 
+%-----------------------------------------------------------
 %Margin setup
 
 \setlength{\evensidemargin}{-0.25in}
-
-\setlength{\headheight}{-0.25in}
-
+\setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
-
 \setlength{\oddsidemargin}{-0.25in}
-
 \setlength{\paperheight}{11in}
-
 \setlength{\paperwidth}{8.5in}
-
 \setlength{\tabcolsep}{0in}
-
-\setlength{\textheight}{9.75in}
-
+\setlength{\textheight}{9.5in}
 \setlength{\textwidth}{7in}
-
 \setlength{\topmargin}{-0.3in}
-
 \setlength{\topskip}{0in}
-
 \setlength{\voffset}{0.1in}
 
-%-----------------------------------------------------------
 
+%-----------------------------------------------------------
 %Custom commands
-
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-
 \newcommand{\resheading}[1]{\vspace{8pt}
-
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-
     \begin{shaded}
-
 \setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-
     \end{shaded}
-
   }\vspace{-5pt}
-
 }
-
 \newcommand{\ressubheading}[4]{
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-
-		\textbf{#1} & #2 \\
-
-		\textit{#3} & \textit{#4} \\
-
-\end{tabular*}\vspace{-6pt}}
-
+\begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
+  \textbf{#1} & #2 \\
+  \textit{#3} & \textit{#4} \\
+\end{tabularx}\vspace{-6pt}}
 %-----------------------------------------------------------
+
 
 \begin{document}
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-
-\textbf{\Large Anthony Kosednar} & \textbf{\today} \\
-
-{Multi-disciplined Engineer} & {akosednar@asu.edu} \\
-
-2835 East Park Ave., Gilbert, AZ 85234 & http://anthonykosednar.com/
-
-\end{tabular*}
+\begin{tabularx}{7in}{Xr}
+  \textbf{\Large  Anthony Kosednar} & \textbf{April 10, 2015} \\
+  {Multi-disciplined Engineer} & {anthony@ghostorchd.com} \\
+  {https://ghostorchd.com/} & {2440 West Ray Road, STE 6-129, Chandler, AZ 85224}\\
+\end{tabularx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \resheading{Education}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{itemize}
 
-\item
+\item \ressubheading{Arizona State University}{Tempe, AZ}{Ira A. Fulton School of Engineering}{Aug. 2012 - April 2016 (Expected)}
 
-	\ressubheading{Arizona State University}{Tempe, AZ}{Ira A. Fulton School of Engineering}{Aug. 2012 - May 2016 (projected)}
-
-	\begin{itemize}
-
-		\resitem{Astronautical Aerospace Engineering}
-
-	\end{itemize}
-\item
-
-	\ressubheading{Chandler Preparatory Academy}{Chandler, AZ}{High School Education}{Aug. 2008 - May 2012}
-
-	\begin{itemize}
-
-		\resitem{4 years Honors Humane Letters and French}
-
-		\resitem{2 years Honors Calculus and Physics}
-
-		\resitem{1 year Honors Geometry, Algebra, Chemistry, and Biology}
-
-		\resitem{2 Semesters Music, Drama, Art, and Poetry}
-		
-		\resitem{Senior Thesis}
-
-	\end{itemize}
-
-\item
-
-	\ressubheading{Arizona State University}{Tempe, AZ}{School of Mathematical and Statistical Sciences}{Aug. 2010 - April 2012}
-
-	\begin{itemize}
-
-		\resitem{High School Program (Math Circles), Non-Credit Granting}
-
-		\resitem{Number Theory, Field Theory, Cryptography, and Statistics}
-
-	\end{itemize}
-	
+\begin{itemize}
+    \resitem{B.S. Aerospace Engineering - Astronautics}
 \end{itemize}
 
+\item \ressubheading{Department of Homeland Security}{Phoenix, AZ}{Industrial Control Systems Cyber Emergency Response Team}{April 2015}
 
+  \begin{itemize}
+
+    \resitem{Cybersecurity for Industrial Control Systems (101, 201, 202)}
+
+\end{itemize}
+
+\item
+
+  \ressubheading{Arizona State University}{Tempe, AZ}{School of Mathematical and Statistical Sciences}{Aug. 2010 - April 2012}
+
+  \begin{itemize}
+
+    \resitem{High School Program (Math Circles), Non-Credit Granting}
+
+    \resitem{Number Theory, Field Theory, Cryptography, and Statistics}
+
+  \end{itemize}
+  
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \resheading{Skills}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
+ \item {\bf Development:} MATLAB, PHP, HTML5, CSS3, JavaScript, MySQL, Python, Perl, Bash
 
-\item {\bf Development:} MATLAB, PHP, HTML5, CSS3, JavaScript, MySQL, Python, Bash
-
-\item {\bf Computer Science:} Data Mining, Operating Systems
-
-\item Discovering and implementing new ideas.
+\item {\bf Computer Science:} Cyber Security, Data Mining, Operating Systems
 
 \item Ability to learn and adapt to a new discipline, area or environment and start producing real results.
-
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \resheading{Work Experience}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
 
 \item
 
-	\ressubheading{Lockerhub}{Gilbert, AZ}{Freelancing}{Aug. 2009 - Present}
+	\ressubheading{360 Education Solutions}{Chandler, AZ}{Director of Technology}{Feb. 2013 - Present}
 
 	\begin{itemize}
 
-		\resitem{Developed websites and applications for a range of clients}
+		\resitem{Developed technologies, strategies, and policies while balancing cost and profit}
 
-  		 \resitem{System administrator for a network of servers running  Citrix XenServer}
+		\resitem{Instituted agile development workflow}
 
+		\resitem{Hired and lead a remote development team spanning multiple timezones}
+
+		\resitem{Developed and administrated 200+ Ruby on Rails websites}
+
+		\resitem{Developed a secure database of every school and teacher in the United States}
+
+		\resitem{Increased revenue by 480\%}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Ghost Orchid}{Chandler, AZ}{Software Developer / Network Intrusion Analyst}{Aug. 2009 - Present}
+
+	\begin{itemize}
+		\resitem{Provided consulting services for small businesses and enterprises}
+		\resitem{Created unique hardware and software solutions based on customer needs}
+		\resitem{Conducted and submitted security research to the DHS and FBI}
+		\resitem{Increased overall productivity and security of customers' operations}
 	\end{itemize}
 
 \item 
 
-	\ressubheading{TechnoKOZ}{Gilbert, AZ}{Computer Technician}{July 2008 - Present}
+	\ressubheading{TechnoKOZ}{Gilbert, AZ}{System and Network Administrator}{July 2008 - Present}
 
 	\begin{itemize}
-
-		\resitem{Installed, repaired, maintained, and upgraded servers, desktop and notebook computers}
-
- 		 \resitem{Installed and maintained network equipment}
-
-	\end{itemize}
-
-\item
-
-	\ressubheading{Cybermark International Inc.}{Phoenix, AZ}{Search Engine Optimization Engineer}{May 2008 - Aug. 2008}
-
-	\begin{itemize}
-
-		\resitem{Preformed back-link campaigning for clients}
-		\resitem{Preformed social media campaigning for clients}
-
+		\resitem{Consulted for critical infrastructure such as sporting venues and financial institutions}
+		\resitem{Developed unique hardware, software, and policies to secure customers' operations}
+		\resitem{Interfaced with key personnel and law enforcement to provide technical operational support}
+		\resitem{Successfully detected and defended customers from advanced threats}
 	\end{itemize}
 	
 \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Organizations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {InfraGard - }{\textit{Membership Pending}}
+\item {North American Network Operators Group (NANOG)}
+\item {American Institute of Aeronautics and Astronautics (AIAA)} 
+\item {National Society of Professional Engineers (NSPE) }
+
+\end{itemize}
+
 
 \end{document}
